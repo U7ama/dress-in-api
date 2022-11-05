@@ -1,9 +1,7 @@
 {
-  "name": "dtech",
+  "name": "dress-in-api",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "dhencios15",
-  "license": "MIT",
   "scripts": {
     "start": "node server.js",
     "start:dev": "nodemon server.js",
