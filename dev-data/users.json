@@ -1,0 +1,12 @@
+[
+  {
+    "photo": "defailt.jpg",
+    "role": "user",
+    "active": true,
+    "name": "Uc",
+    "email": "u7amajutt@gmail.com",
+    "password": "$2a$12$jRRjKqhUY40ETKw/QZRlgupq0WUnbFbNPMGpwGNIA5NQDjJuZhyhi",
+    "favorites": [],
+    "__v": 0
+  }
+]
