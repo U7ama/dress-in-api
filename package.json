@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": "14.x"
   },
   "scripts": {
-    "start": "node server.js",
-    "start:dev": "nodemon server.js",
-    "start:prod": "SET NODE_ENV=production & nodemon server.js"
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "start:prod": "SET NODE_ENV=production & nodemon index.js"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^1.1.2",
