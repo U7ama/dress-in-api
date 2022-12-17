@@ -4,12 +4,12 @@ require("dotenv").config();
 const app = require("./app");
 const local_url = "mongodb://localhost:27017/DressIN";
 const cluster_url =
-  "your-url";
+  "mongodb+srv://usama:usama@cluster0.iqyds.mongodb.net/DressIN?retryWrites=true&w=majority";
 const DB_URI = process.env.NODE_ENV === "production" ? cluster_url : local_url;
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 mongoose
-  .connect(DB_URI, {
+  .connect(cluster_url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
@@ -18,5 +18,5 @@ mongoose
   .then(() => console.log("MONGO DB CONNECTED ..."));
 
 app.listen(PORT, () =>
-  console.log(`SERVER RUNNING (${process.env.NODE_ENV}) ON PORT ${PORT} ...`)
+  console.log(`SERVER RUNNING ON PORT ${PORT} ...`)
 );
