@@ -6,7 +6,9 @@ const router = Router();
 
 router
   .route("/")
-  .get(protect, orderController.getUserOrder)
-  .post(protect, orderController.createOrder);
+  .get(orderController.getUserOrder)
+  .post(orderController.createOrder);
+// .get(protect, orderController.getUserOrder)
+// .post(protect, orderController.createOrder);
 
 module.exports = router;
