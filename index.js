@@ -9,7 +9,7 @@ const DB_URI = process.env.NODE_ENV === "production" ? cluster_url : local_url;
 const PORT = 3000;
 
 mongoose
-  .connect(cluster_url, {
+  .connect(DB_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
@@ -17,6 +17,4 @@ mongoose
   })
   .then(() => console.log("MONGO DB CONNECTED ..."));
 
-app.listen(PORT, () =>
-  console.log(`SERVER RUNNING ON PORT ${PORT} ...`)
-);
+app.listen(PORT, () => console.log(`SERVER RUNNING ON PORT ${PORT} ...`));
